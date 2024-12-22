@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translation Result</title>
+    <style>
+        .code-container {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .code-box {
+            flex: 1;
+        }
+        textarea {
+            width: 100%;
+            height: 400px;
+            font-family: monospace;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Translation Result</h1>
+        <div class="code-container">
+            <div class="code-box">
+                <h3>Original Code ({{ source_language }})</h3>
+                <textarea readonly>{{ source_code }}</textarea>
+            </div>
+            <div class="code-box">
+                <h3>Translated Code ({{ target_language }})</h3>
+                <textarea readonly>{{ translated_code }}</textarea>
+            </div>
+        </div>
+        <a href="{{ url_for('translate_code_form') }}">Translate Another Code</a>
+    </div>
+</body>
+</html>

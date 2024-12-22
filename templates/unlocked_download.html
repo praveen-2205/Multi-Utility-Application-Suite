@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download Unlocked PDF</title>
+    <style>
+        /* Basic Reset and Theme Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer; /* Pointer cursor for the button */
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Unlocked PDF</h1><br>
+    <p>Your PDF has been unlocked successfully.</p><br>
+    <a class="download-button" href="{{ url_for('download_unlocked', filename=filename) }}">Download Unlocked PDF</a>
+    </div>
+</body>
+</html>

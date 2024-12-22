@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
+            font-family: Arial, sans-serif; /* Font style */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add some padding */
+            text-align: center; /* Center text */
+        }
+        
+        h1 {
+            margin-bottom: 20px; /* Space below heading */
+        }
+        
+        form {
+            background-color: #333333; /* Dark gray form background */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Padding inside the form */
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Subtle shadow effect */
+        }
+
+        label {
+            font-size: 18px; /* Font size for label */
+            display: block; /* Block element for spacing */
+            margin-bottom: 10px; /* Space below label */
+        }
+
+        input[type="text"] {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding inside the input */
+            border: none; /* Remove default border */
+            border-radius: 4px; /* Rounded corners */
+            margin-bottom: 20px; /* Space below input */
+        }
+
+        button {
+            background-color: #FF4081; /* Bright button color */
+            color: #FFFFFF; /* White text */
+            border: none; /* Remove default border */
+            border-radius: 4px; /* Rounded corners */
+            padding: 10px 20px; /* Padding inside button */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size for button */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #FF79B0; /* Lighter color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate QR Code</h1>
+    <form action="/qr" method="post">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Download QR Code</button>
+    </form>
+</body>
+</html>

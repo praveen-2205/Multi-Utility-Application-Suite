@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF and Apply Watermark</title>
+    <style>
+        /* General styles for the body */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Center container and add padding */
+        .container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Form header */
+        h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Label and input styles */
+        label {
+            font-size: 1em;
+            display: block;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+            text-align: left;
+        }
+
+        input[type="file"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            background-color: #2b2b2b;
+            color: #ffffff;
+        }
+
+        /* Button styling */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Upload PDF and Apply Watermark</h2>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="pdf_file">Select PDF:</label>
+            <input type="file" name="pdf_file" id="pdf_file" accept=".pdf" required><br>
+
+            <label for="watermark_text">Enter Watermark Text:</label>
+            <input type="text" name="watermark_text" id="watermark_text" required><br>
+
+            <button type="submit">Download PDF</button>
+        </form>
+    </div>
+
+</body>
+</html>

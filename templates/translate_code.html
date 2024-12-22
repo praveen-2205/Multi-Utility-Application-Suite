@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Translator</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Code Translator</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="{{ url_for('translate_code') }}">
+            <div>
+                <label for="source_code">Source Code:</label>
+                <textarea name="source_code" required></textarea>
+            </div>
+            
+            <div>
+                <label for="target_language">Target Language:</label>
+                <select name="target_language" required>
+                <option value="assembly">Assembly</option>    
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+                <option value="ruby">Ruby</option>
+                <option value="go">Go</option>
+                <option value="csharp">C#</option>
+                <option value="php">PHP</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+                
+                </select>
+            </div>
+            
+            <button type="submit">Translate</button>
+        </form>
+    </div>
+</body>
+</html>

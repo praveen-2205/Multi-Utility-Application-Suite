@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Video to Audio</title>
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
+            font-family: Arial, sans-serif; /* Font style */
+            display: flex; /* Center the content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            text-align: center; /* Center the text */
+            padding: 20px; /* Add padding */
+            border: 2px solid #FFFFFF; /* White border */
+            border-radius: 10px; /* Rounded corners */
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+            width: 400px; /* Fixed width */
+        }
+        h1 {
+            margin-bottom: 20px; /* Spacing below the heading */
+        }
+        label {
+            font-size: 18px; /* Larger font for the label */
+            margin-bottom: 10px; /* Spacing below the label */
+            display: block; /* Make label block-level */
+        }
+        input[type="file"] {
+            margin-bottom: 20px; /* Spacing below the file input */
+            padding: 10px; /* Padding inside the file input */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+        }
+        button {
+            background-color: #FFFFFF; /* White button background */
+            color: #000000; /* Black text */
+            padding: 10px 20px; /* Button padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size for the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth background color transition */
+        }
+        button:hover {
+            background-color: #CCCCCC; /* Light gray on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Convert Video to Audio</h1>
+        <form action="{{ url_for('convert_video_to_audio') }}" method="POST" enctype="multipart/form-data">
+            <label for="video_file">Upload Video File:</label>
+            <input type="file" id="video_file" name="video_file" accept="video/*" required>
+            <button type="submit">Convert to Audio</button>
+        </form>
+    </div>
+</body>
+</html>

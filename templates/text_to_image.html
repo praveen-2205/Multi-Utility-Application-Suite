@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Text to Image Converter</title>
+    <style>
+        /* Basic Reset and Theme Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height */
+            text-align: center; /* Centered text */
+        }
+
+        h2 {
+            margin-bottom: 1rem; /* Space below the heading */
+            font-size: 2rem; /* Larger font size */
+            color: #ffffff; /* White color for heading */
+        }
+
+        form {
+            background-color: #1a1a1a; /* Dark gray background for the form */
+            padding: 2rem; /* Padding around the form */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle shadow */
+        }
+
+        label {
+            margin-bottom: 0.5rem; /* Space below the label */
+            display: block; /* Block display for label */
+            font-size: 1.2rem; /* Larger font size for label */
+            color: #ffffff; /* White color for label */
+        }
+
+        input[type="file"] {
+            padding: 0.5rem; /* Padding for the input */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 1rem; /* Space below the input */
+            width: 100%; /* Full width */
+            background-color: #333; /* Dark background for input */
+            color: #ffffff; /* White text */
+        }
+
+        button {
+            padding: 0.75rem 1.5rem; /* Padding for button */
+            background-color: #007bff; /* Blue background */
+            color: #ffffff; /* White text */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1.2rem; /* Larger font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Upload a Text File to Convert</h2>
+
+    <form action="/text-to-image" method="POST" enctype="multipart/form-data">
+        <label for="file">Select Text File:</label>
+        <input type="file" name="file" id="file" accept=".txt" required>
+        <button type="submit">Convert to Image</button>
+    </form>
+
+</body>
+</html>

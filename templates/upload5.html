@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Word Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        p {
+            color: #eee;
+            margin-bottom: 30px;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .upload-area {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #fff;
+            color: #6a11cb;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-area:hover {
+            background-color: #6a11cb;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .upload-area input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .btn-convert {
+            background-color: #fff;
+            color: #2575fc;
+            padding: 10px 25px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-convert:hover {
+            background-color: #2575fc;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideDown {
+            0% { transform: translateY(-30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF to Word Converter</h1>
+        <p>Convert your PDF files to Word documents quickly and easily</p>
+        <form action="/convertsum" method="post" enctype="multipart/form-data">
+            <label class="upload-area">
+                <i class="fas fa-file-upload"></i> Choose a PDF File
+                <input type="file" name="pdf_file" required>
+            </label>
+            <br>
+            <button type="submit" class="btn-convert">Convert Now</button>
+        </form>
+    </div>
+</body>
+</html>

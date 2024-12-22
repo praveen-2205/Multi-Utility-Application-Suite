@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unlock PDF</title>
+</head>
+<style>
+    /* Basic Reset and Theme Setup */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        background-color: #000000;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    h1 {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /* Form Styling */
+    .form-container {
+        background-color: #1a1a1a;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: #cccccc;
+        text-align: left;
+    }
+    
+    input[type="file"],
+    input[type="password"] {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #333333;
+        border-radius: 5px;
+        background-color: #2c2c2c;
+        color: #ffffff;
+        font-size: 1rem;
+    }
+    
+    button {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+   
+   
+ <div class="form-container">
+    <h1>Unlock PDF</h1>
+    <form action="{{ url_for('unlock_pdf') }}" method="POST" enctype="multipart/form-data">
+        <label for="pdf_file">Select PDF File:</label>
+        <input type="file" name="pdf_file" id="pdf_file" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+        <button type="submit">Unlock PDF</button>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-message">
+                {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    </form>
+<div>
+</body>
+</html>

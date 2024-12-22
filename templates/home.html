@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <br>
+    </br>
+    <h1>TransformIT</h1> <!-- Site Name Added -->
+    <br>
+    </br>
+    <div class="container">
+        <a href="{{ url_for('text_to_image_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/texttoimage1.png') }}" alt="Text to Image" class="box-image">
+            <h2>Text to Handwritten Image Converter</h2>
+            <!--<p>Convert your text file to a handwritten-style image.</p>-->
+        </a>
+        <a href="{{ url_for('upload_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/watermark.png') }}" alt="PDF Watermark" class="box-image">
+            <h2>Add Watermark to Your PDF</h2>
+            <!--<p>Upload a PDF and apply a watermark.</p>-->
+        </a>
+        <a href="{{ url_for('encrypt_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/lock.png') }}" alt="PDF Watermark" class="box-image">
+            <h2>Encrypt Your PDF</h2>
+            <!--<p>Upload a PDF and apply a watermark.</p>-->
+        </a>
+        <a href="{{ url_for('uploadkarthik_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/extractimage.png') }}" alt="Image From PDF" class="box-image">
+            <h2>Extract Images From PDF</h2>
+            
+        </a>
+
+        <a href="{{ url_for('process_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/hemapdf.png') }}" alt="PDF Processes" class="box-image">
+            <h2>PDF Processes</h2>
+            
+        </a>
+
+        <a href="{{ url_for('uploadmani') }}" class="box">
+            <img src="{{ url_for('static', filename='images/maniimage.png') }}" alt="PDF TO IMAGE" class="box-image">
+            <h2>Convert Pdf to Images</h2>
+            
+        </a>
+        <a href="{{ url_for('translate_code') }}" class="box">
+            <img src="{{ url_for('static', filename='images/3053663_processed.webp') }}" alt="Code Converter" class="box-image">
+            <h2>Code Converter</h2>
+        </a>
+        <a href="{{ url_for('audio_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/vtoa.png') }}" alt="Video to Audio" class="box-image">
+            <h2>Extract Audio from Video</h2>
+        </a>
+        <a href="{{ url_for('qr') }}" class="box">
+            <img src="{{ url_for('static', filename='images/qr.png') }}" alt="QR Code Generator" class="box-image">
+            <h2>Generate QR Code</h2>
+        </a>   
+        <a href="{{ url_for('uploadkarthik1_form') }}" class="box">
+            <img src="{{ url_for('static', filename='images/ptov.png') }}" alt="PDF to Video" class="box-image">
+            <h2>Convert PDF to Video</h2>
+            
+        </a>
+        <a href="{{ url_for('uploadsumith') }}" class="box">
+            <img src="{{ url_for('static', filename='images/sum.png') }}" alt="PDF to Word" class="box-image">
+            <h2>Convert PDF to Word</h2>
+            
+        </a>
+
+        <a href="{{ url_for('unlock_page') }}" class="box">
+            <img src="{{ url_for('static', filename='images/unlock.webp') }}" alt="PDF Watermark" class="box-image">
+            <h2>Unlock a Pdf</h2>
+           
+        </a>
+
+        <a href="{{ url_for('uploadmani2') }}" class="box">
+            <img src="{{ url_for('static', filename='images/mani.png') }}" alt="Text to Voice" class="box-image">
+            <h2>Convert Text to Voice</h2>
+           
+        </a>
+    </div>
+</body>
+</html>
