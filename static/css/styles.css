@@ -1,0 +1,128 @@
+/* General Styles for Both Pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffffff; /* Light blue color */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Box Styles */
+.box {
+    background-color: #282c34; /* Box background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Effect */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #1e90ff, 0 0 30px #1e90ff, 0 0 40px #1e90ff;
+}
+
+.box:nth-child(2):hover {
+    box-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f; /* Pink glow */
+}
+
+.box:nth-child(3):hover {
+    box-shadow: 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14; /* Green glow */
+}
+
+.box:nth-child(4):hover {
+    box-shadow: 0 0 20px #ff9800, 0 0 30px #ff9800, 0 0 40px #ff9800; /* Green glow */
+}
+
+.box:nth-child(5):hover {
+    box-shadow: 0 0 20px #e84037, 0 0 30px #e84037, 0 0 40px #e84037; /* Green glow */
+}
+.box:nth-child(6):hover {
+    box-shadow: 0 0 20px #a6ecc6, 0 0 30px #a6ecc6, 0 0 40px #a6ecc6; /* Green glow */
+}
+
+.box:nth-child(7):hover {
+    box-shadow: 0 0 20px #800080, 0 0 30px #800080, 0 0 40px #800080; /* Green glow */
+}
+
+.box:nth-child(8):hover {
+    box-shadow: 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00; /* Green glow */
+}
+
+.box:nth-child(9):hover {
+    box-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff; /* Green glow */
+}
+.box:nth-child(10):hover {
+    box-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange; /* Green glow */
+}
+.box:nth-child(11):hover {
+    box-shadow: 0 0 20px #fefefe, 0 0 30px #fefefe, 0 0 40px #fefefe; /* Green glow */
+}
+.box:nth-child(12):hover {
+    box-shadow: 0 0 20px grey, 0 0 30px grey, 0 0 40px grey; /* Green glow */
+}
+.box:nth-child(13):hover {
+    box-shadow: 0 0 20px #fefefe, 0 0 30px #fefefe, 0 0 40px #fefefe; /* Green glow */
+}
+
+
+.box h2 {
+    color: #fff; /* White text */
+}
+
+.box-image {
+    width: 100%; /* Ensure images fit within the box */
+    height: auto;
+    border-radius: 10px; /* Round the corners of the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Form Styling */
+/* ... [Existing form styles] ... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .box {
+        width: 90%; /* Responsive width */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
